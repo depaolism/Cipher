@@ -31,12 +31,6 @@ class Cipher(sublime_plugin.TextCommand):
             self.view.replace(edit, region, transumted_region)
 
 
-class Base64EncodeCommand(Cipher):
-    def transmute(self, text):
-        text = text.encode('raw_unicode_escape')
-        return base64.b64encode(text).decode('ascii')
-
-
 class Base64DecodeCommand(Cipher):
     def pad(self, text):
         mod = len(text) % 4
@@ -53,6 +47,12 @@ class Base64DecodeCommand(Cipher):
         return b64
 
 
+class Base64EncodeCommand(Cipher):
+    def transmute(self, text):
+        text = text.encode('raw_unicode_escape')
+        return base64.b64encode(text).decode('ascii')
+
+
 class UrlDecode(Cipher):
     def transmute(self, text):
         try:
@@ -66,3 +66,26 @@ class UrlDecode(Cipher):
 class UrlEncode(Cipher):
     def transmute(self, text):
         return urllib.parse.quote(text)
+
+
+class UnicodeEscapeDecodeCommand(Cipher):
+    def transmute(self, text):
+        transmutation = (text.encode('ascii')).decode('unicode_escape')
+        return transmutation
+
+
+class UnicodeEscapeEncodeCommand(Cipher):
+    def transmute(self, text):
+        return "Not implemented... yet?"
+
+
+class UnicodeAndUrlDecodeCommand(Cipher):
+    def transmute(self, text):
+        unicode_decoded = (text.encode('ascii')).decode('unicode_escape')
+        transmutation = urllib.parse.unquote(unicode_decoded)
+        return transmutation
+
+
+class UnicodeAndUrlEncodeCommand(Cipher):
+    def transmute(self, text):
+        return "Not implemented... yet?"
