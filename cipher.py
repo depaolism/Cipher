@@ -8,7 +8,10 @@
 # License: MIT
 #
 
+import re
+import sys
 import base64
+import urllib
 
 import sublime
 import sublime_plugin
@@ -48,3 +51,18 @@ class Base64DecodeCommand(Cipher):
     def transmute(self, text):
         b64 = base64.b64decode(self.pad(text)).decode('raw_unicode_escape')
         return b64
+
+
+class UrlDecode(Cipher):
+    def transmute(self, text):
+        try:
+            result = urllib.parse.unquote(text)
+        except:
+            e = sys.exc_info()[1]
+            result = str(e)
+        return result
+
+
+class UrlEncode(Cipher):
+    def transmute(self, text):
+        return urllib.parse.quote(text)
