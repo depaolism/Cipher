@@ -89,3 +89,14 @@ class UnicodeAndUrlDecodeCommand(Cipher):
 class UnicodeAndUrlEncodeCommand(Cipher):
     def transmute(self, text):
         return "Not implemented... yet?"
+
+
+class FromCharCodeArray(Cipher):
+    def transmute(self, text):
+        text = text.replace('[', '')
+        text = text.replace(']', '')
+        re.sub(r'\s+', '', text)        # remove all whitespace
+        arr = text.split(',')
+        arr = [int(i) for i in arr]
+        transmutation = ''.join(map(chr, arr))
+        return transmutation
