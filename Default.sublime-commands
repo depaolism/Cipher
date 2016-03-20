@@ -20,16 +20,8 @@
 		"command" : "unicode_escape_decode"
 	},
 	{
-		"caption" : "Cipher: Unicode Escape Encode",
-		"command" : "unicode_escape_encode"
-	},
-	{
 		"caption" : "Cipher: Unicode and URL Decode",
 		"command" : "unicode_and_url_decode"
-	},
-	{
-		"caption" : "Cipher: Unicode and URL Encode",
-		"command" : "unicode_and_url_encode"
 	},
 	{
 		"caption" : "Cipher: Run chr(c) on a comma delimited array",

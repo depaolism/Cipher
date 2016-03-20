@@ -1,7 +1,7 @@
 [
 {
 	"id" : "Cipher",
-	"caption": "Cipher"
+	"caption": "Cipher",
 	"children":
 	[
 	{
@@ -49,14 +49,6 @@
 		{
 			"caption" : "URL Encode",
 			"command" : "url_encode"
-		},
-		{
-			"caption" : "Unicode Escape Encode",
-			"command" : "unicode_escape_encode"
-		},
-		{
-			"caption" : "Unicode Escape and URL Encode",
-			"command" : "unicode_and_url_encode"
 		}
 		]
 	}
