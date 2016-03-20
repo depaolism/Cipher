@@ -1,0 +1,46 @@
+[
+	{
+		"caption" : "Cipher: Base64 Decode",
+		"command" : "base64_decode"
+	},
+	{
+		"caption" : "Cipher: Base64 Encode",
+		"command" : "base64_encode"
+	},
+	{
+		"caption" : "Cipher: URL Decode",
+		"command" : "url_decode"
+	},
+	{
+		"caption" : "Cipher: URL Encode",
+		"command" : "url_encode"
+	},
+	{
+		"caption" : "Cipher: Unicode Escape Decode",
+		"command" : "unicode_escape_decode"
+	},
+	{
+		"caption" : "Cipher: Unicode Escape Encode",
+		"command" : "unicode_escape_encode"
+	},
+	{
+		"caption" : "Cipher: Unicode and URL Decode",
+		"command" : "unicode_and_url_decode"
+	},
+	{
+		"caption" : "Cipher: Unicode and URL Encode",
+		"command" : "unicode_and_url_encode"
+	},
+	{
+		"caption" : "Cipher: Run chr(c) on a comma delimited array",
+		"command" : "from_char_code_array"
+	},
+	{
+		"caption" : "Cipher: Remove Nulls",
+		"command" : "remove_nulls"
+	},
+	{
+		"caption" : "Cipher: Concatenate Strings",
+		"command" : "combine_string_concatenations"
+	}
+]

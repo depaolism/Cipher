@@ -1,0 +1,65 @@
+[
+{
+	"id" : "Cipher",
+	"caption": "Cipher"
+	"children":
+	[
+	{
+		"caption": "Decode",
+		"children":
+		[
+		{
+			"caption" : "Base64 Decode",
+			"command" : "base64_decode"
+		},
+		{
+			"caption" : "URL Decode",
+			"command" : "url_decode"
+		},
+		{
+			"caption" : "Unicode Escape Decode",
+			"command" : "unicode_escape_decode"
+		},
+		{
+			"caption" : "Unicode and URL Decode",
+			"command" : "unicode_and_url_decode"
+		},
+		{
+			"caption" : "Remove Nulls",
+			"command" : "remove_nulls"
+		},
+		{
+			"caption" : "Run chr(c) on a comma delimited array",
+			"command" : "from_char_code_array"
+		},
+		{
+			"caption" : "Combine String Concatenation",
+			"command" : "combine_string_concatenation"
+		}
+		]
+	},
+	{
+		"caption": "Encode",
+		"children":
+		[
+		{
+			"caption" : "Base64 Encode",
+			"command" : "base64_encode"
+		},
+		{
+			"caption" : "URL Encode",
+			"command" : "url_encode"
+		},
+		{
+			"caption" : "Unicode Escape Encode",
+			"command" : "unicode_escape_encode"
+		},
+		{
+			"caption" : "Unicode Escape and URL Encode",
+			"command" : "unicode_and_url_encode"
+		}
+		]
+	}
+	]
+}
+]
