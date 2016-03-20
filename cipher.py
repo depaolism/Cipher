@@ -100,3 +100,14 @@ class FromCharCodeArray(Cipher):
         arr = [int(i) for i in arr]
         transmutation = ''.join(map(chr, arr))
         return transmutation
+
+
+class RemoveNulls(Cipher):
+    def transmute(self, text):
+        return remove_null_bytes(text)
+
+
+class CombineStringConcatenation(Cipher):
+    def transmute(self, text):
+        transmutation = re.sub('"\s*\+\s*\"', '', text)
+        return transmutation
