@@ -3,7 +3,7 @@
 # Cipher, a deobfuscation tool for Sublime Text 3
 #
 # Written by Metin Carlo DePaolis
-# Copyright (c) 2017 Metin Carlo DePaolis
+# Copyright (c) 2016 Metin Carlo DePaolis
 #
 # License: MIT
 #
